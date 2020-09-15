@@ -1,0 +1,173 @@
+body {
+    background-image: url("images/lemons.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*This is meant to give the affect/illusion of filling up the link frame
+with lemonade when hovered over. It is called in "a:hover"*/
+@keyframes pourAGlass {
+    from {background-color: whitesmoke;}
+    to {background-color: yellow;}
+  }
+
+#intro {
+    margin: auto;
+    width: 90%;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0px 0px 1px yellow; 
+}
+
+/*I wanted to give the main title the ol' razzle dazzle*/
+h1 {
+    text-align: center;
+    font-size: 70px;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black, 0px 0px 35px yellow, 1px 1px 10px rgba(255, 255, 0, 0.795);
+    /*(napoleon dynamite voice) "It took me like 3 hours to finish the shading on the title text.
+    Probably the best webpage I've ever done."*/
+    margin: auto;
+    width: 90%;
+}
+
+h2 {
+    text-align: left;
+    margin: auto;
+    width: 90%;
+    padding: 10px 20px;
+}
+
+ul {
+    opacity: 0.8;
+    /*(this clashed with float setting in "ul li," so this
+    was removed and the image added inline in the html instead (I know, I know. I did read
+    the directions, and I really did try to make this work in CSS, but the alignment was all
+    wonky no matter what I did. It's the only thing I did this way, I swear. And
+    I still had to use CSS to prevent clashing between the lemons and bullets).)
+    list-style-image: url("images/onelemon.jpg");
+    list-style-position: inside;*/
+    list-style-type: none;
+    margin: auto;
+    width: 90%;
+    padding: 0px;
+    overflow: hidden;
+  }
+
+ul li {
+    background: whitesmoke;
+    opacity: 0.9;
+    margin: auto;
+    width: 25%;
+    padding: 0px;
+    float: left;
+  }
+
+li a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+    display: block;
+    padding: 15px;
+}  
+  
+li a:hover {
+    text-decoration: none;
+    font-size: 120%;
+    color: black;
+    animation-name: pourAGlass;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    background-color: yellow;
+    /*background-color is added at the end, otherwise
+    the background-color reverts back to whitesmoke when
+    the animation effect is complete*/
+  }
+
+section {
+    background-color: black;
+    opacity: 0.9;
+    border-style: outset;
+    border-width: 4px;
+    border-color: cyan;
+    border-radius: 4px;
+    margin: auto;
+    width: 90%;
+    padding: 5px;
+    color: white;
+    overflow: auto;
+    word-wrap: break-word;
+  }
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 1px 1px 0px yellow;
+    padding: 0px;
+}
+
+.leftImage {
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    width: 25%;
+    margin: 5px;
+    padding: 5px;
+    overflow: auto;
+    display: block;
+}
+
+.rightImage {
+    float: right;
+    text-align: center;
+    font-size: 12px;
+    width: 25%;
+    margin: 5px;
+    padding: 5px;
+    overflow: auto;
+    display: block;
+}
+
+picture {
+    object-position: center;
+    display: flex;
+    flex-direction: row;
+}
+
+/*I was going to call this selector "na*7+BATMAN", but selectors have to be strings :( */
+#nananananananaBATMAN {
+    align-items: center;
+    margin: auto;
+    width: 25%;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+button {
+    box-align: center;
+    background-color: yellow;
+    width: 100%;
+    opacity: 0.8;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+}
+
+button a:hover {
+    text-decoration: none;
+    font-size: 120%;
+    color: black;
+    animation-name: pourAGlass;
+    animation-duration: 1s;
+    animation-direction: reverse;
+    animation-timing-function: ease-out;
+    background-color: whitesmoke;
+}
